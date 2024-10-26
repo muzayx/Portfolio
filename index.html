@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Gabriel Muzaranho</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" type="imagex/png" href="icone.ico">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        blue: {
+                            400: '#60a5fa',
+                            600: '#2563eb',
+                        },
+                        gray: {
+                            50: '#f9fafb',
+                            100: '#f3f4f6',
+                            200: '#e5e7eb',
+                            300: '#d1d5db',
+                            400: '#9ca3af',
+                            500: '#6b7280',
+                            600: '#4b5563',
+                            700: '#374151',
+                            800: '#1f2937',
+                            900: '#111827',
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .theme-transition {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .navbar-link {
+            transition: color 0.15s ease;
+        }
+
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .scroll-animation.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .blinking-cursor {
+            font-weight: 100;
+            font-size: 30px;
+            color: blue;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="min-h-screen bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors font-sans theme-transition fade-in">
+    <header class="fixed w-full bg-white dark:bg-gray-800 shadow-md z-10 transition-colors theme-transition">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">MUZA</div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#about" class="navbar-link hover:text-blue-600 dark:hover:text-blue-400">Sobre</a>
+                    <a href="#skills" class="navbar-link hover:text-blue-600 dark:hover:text-blue-400">Habilidades</a>
+                    <a href="#projects" class="navbar-link hover:text-blue-600 dark:hover:text-blue-400">Projetos</a>
+                    <a href="#contact" class="navbar-link hover:text-blue-600 dark:hover:text-blue-400">Contato</a>
+                    <button id="darkModeToggle" aria-label="Toggle dark mode" class="transition-all hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 dark:hidden" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden dark:inline" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="darkModeToggleMobile" aria-label="Toggle dark mode"
+                        class="mr-4 transition-all hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 dark:hidden" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden dark:inline" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                    </button>
+                    <button id="mobileMenuToggle" aria-label="Toggle menu" class="transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 py-2 transition-all">
+            <a href="#about"
+                class="block px-6 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">Sobre</a>
+            <a href="#skills"
+                class="block px-6 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">Habilidades</a>
+            <a href="#projects"
+                class="block px-6 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">Projetos</a>
+            <a href="#contact"
+                class="block px-6 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">Contato</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 pt-24">
+        <section id="about" class="py-10">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-4 text-blue-600 dark:text-blue-400">
+                    <span id="typing-text"></span>
+                    <span class="blinking-cursor">|</span>
+                </h1>
+                <p class="text-2xl text-gray-600 dark:text-gray-300 mb-6">
+                    Desenvolvedor Front-end
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 mb-2 max-w-2xl mx-auto">
+                    Olá! Sou o <span class="text-blue-400">Gabriel Eduardo Muzaranho</span>, mais conhecido como muza,
+                    tenho 17 anos e sou dev Front-end. Gosto muito de criar sites web e aprender novas linguagens ou
+                    coisas novas. Estou sempre pronto para enfrentar desafios e mostrar soluções inovadoras que não
+                    apenas atendem, mas excedem as expectativas dos usuários.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills" class="py-10">
+            <h2 class="text-3xl font-bold mb-12 text-center text-blue-600 dark:text-blue-400">Habilidades</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="skillsContainer">
+                <!-- -->
+            </div>
+        </section>
+
+        <section id="projects" class="py-10">
+            <h2 class="text-3xl font-bold mb-12 text-center text-blue-600 dark:text-blue-400">Projetos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8" id="projectsContainer">
+                <!-- -->
+            </div>
+            <div class="mt-12 text-center">
+                <a href="https://github.com/muzayx?tab=repositories" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors">
+                    Ver mais projetos
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 -mr-1 w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <section id="sppa-project" class="py-9 mt-10 md:py-9 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 class="text-3xl md:text-4xl font-extrabold mb-6 md:mb-8 text-center text-blue-600 dark:text-blue-400">
+                Projeto Destaque:  SPPA - ONG
+              </h2>
+              <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl overflow-hidden">
+                <div class="p-6 md:p-8">
+                  <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4 space-y-2 md:space-y-0">
+                    <span class="text-sm font-semibold px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded-full inline-block">
+                      Desenvolvimento Front-end
+                    </span>
+                    <div class="flex items-center space-x-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                      <span class="text-gray-600 dark:text-gray-400 text-sm">Projeto Destaque</span>
+                    </div>
+                  </div>
+                  <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-gray-800 dark:text-white">
+                    Sociedade Piracicabana de Proteção aos Animais
+                  </h3>
+                  <p class="text-gray-600 dark:text-gray-300 mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+                    Tive o privilégio de desenvolver o front-end do site da ONG SPPA como parte do meu TCC, em parceria com a organização. Além de aprimorar minhas habilidades técnicas, o projeto contribuiu para uma causa nobre, criando uma interface acessível para adotantes e apoiadores.                  <div class="mb-4 md:mb-6">
+                    <h4 class="text-base md:text-lg font-semibold mb-2 text-gray-700 dark:text-gray-200">Tecnologias Utilizadas:</h4>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs md:text-sm font-medium">HTML</span>
+                      <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs md:text-sm font-medium">Tailwind CSS</span>
+                      <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs md:text-sm font-medium">JavaScript</span>
+                      <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs md:text-sm font-medium">PHP</span>
+                      <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs md:text-sm font-medium">Responsive Design</span>
+                    </div>
+                  </div>
+                  <div class="flex justify-center md:justify-end">
+                    <a href="https://ongsppa.org" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out w-full md:w-auto justify-center">
+                      Visitar Site
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        <section id="contact" class="mt-20">
+            <h2 class="text-3xl font-bold mb-12 text-center text-primary-600 dark:text-primary-400">Contato</h2>
+            <div class="flex justify-center space-x-8">
+                <a href="https://github.com/muzayx" target="_blank" rel="noopener noreferrer"
+                    class="flex flex-col items-center text-gray-600 dark:text-gray-400 hover:text-[#333] dark:hover:text-[#333] transition-all duration-300 transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mb-2" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23  3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com/in/muzaranho" target="_blank" rel="noopener noreferrer"
+                    class="flex flex-col items-center text-gray-600 dark:text-gray-400 hover:text-[#0077B5] dark:hover:text-[#0077B5] transition-all duration-300 transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mb-2" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="mailto:muzaranhogabriel2702@gmail.com"
+                    class="flex flex-col items-center text-gray-600 dark:text-gray-400 hover:text-[#D44638] dark:hover:text-[#D44638] transition-all duration-300 transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mb-2" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
+                    </svg>
+                    <span>Email</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-200 dark:bg-gray-800 py-6 mt-14 transition-colors">
+        <div class="container mx-auto px-6 text-center text-gray-600 dark:text-gray-400">
+            <p>&copy; <span id="currentYear"></span> Gabriel Eduardo Muzaranho. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn"
+        class="fixed bottom-4 right-4 p-2 bg-blue-600 text-white rounded-full shadow-lg hidden transition-all hover:bg-blue-700 hover:scale-110 opacity-0">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
