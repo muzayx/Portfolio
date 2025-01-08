@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio - Muza</title>
+    <link rel="shortcut icon" type="imagex/png" href="images/icone.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <header class="bg-purple-200 shadow-md fixed w-full z-10">
+      <nav class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center">
+          <a href="#home" class="text-2xl font-bold text-purple-800">Muza</a>
+          <div class="hidden md:flex space-x-4">
+            <a href="#about" class="text-purple-800 hover:text-purple-600"
+              >Sobre</a
+            >
+            <a href="#experience" class="text-purple-800 hover:text-purple-600"
+              >Experiência</a
+            >
+            <a href="#projects" class="text-purple-800 hover:text-purple-600"
+              >Projetos</a
+            >
+            <a href="#skills" class="text-purple-800 hover:text-purple-600"
+              >Habilidades</a
+            >
+            <a href="#contact" class="text-purple-800 hover:text-purple-600"
+              >Contato</a
+            >
+          </div>
+          <button id="menu-toggle" class="md:hidden text-purple-800">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+      <div id="mobile-menu" class="hidden md:hidden bg-purple-100 py-2">
+        <a
+          href="#about"
+          class="block px-4 py-2 text-purple-800 hover:bg-purple-200"
+          >Sobre</a
+        >
+        <a
+          href="#experience"
+          class="block px-4 py-2 text-purple-800 hover:bg-purple-200"
+          >Experiência</a
+        >
+        <a
+          href="#projects"
+          class="block px-4 py-2 text-purple-800 hover:bg-purple-200"
+          >Projetos</a
+        >
+        <a
+          href="#skills"
+          class="block px-4 py-2 text-purple-800 hover:bg-purple-200"
+          >Habilidades</a
+        >
+        <a
+          href="#contact"
+          class="block px-4 py-2 text-purple-800 hover:bg-purple-200"
+          >Contato</a
+        >
+      </div>
+    </header>
+
+    <main id="home">
+      <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="flex flex-col md:flex-row items-center">
+            <div
+              class="md:w-1/3 mb-8 md:mb-0"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              <img
+                src="images/perfil.jpeg"
+                alt="Sua foto"
+                class="rounded-full shadow-lg w-64 h-64 object-cover"
+              />
+            </div>
+            <div
+              class="md:w-2/3 md:pl-8"
+              data-aos="fade-left"
+              data-aos-delay="400"
+            >
+              <h1 class="text-4xl font-bold mb-4">Olá, eu sou o Muza!</h1>
+              <p class="text-xl mb-6">
+                Sou o Gabriel Eduardo Muzaranho, mais conhecido como
+                <span class="text-purple-900">Muza</span>, tenho 18 anos e sou
+                dev Front-End ou buscando ser um. Gosto muito jogar, criar sites
+                web e aprender novas linguagens.
+              </p>
+              <div class="flex space-x-4">
+                <a
+                  href="https://github.com/muzayx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-800 hover:text-gray-600"
+                >
+                  <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a
+                  href="https://linkedin.com/in/muzaranho"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-blue-600 hover:text-blue-400"
+                >
+                  <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="py-20 bg-gray-50" data-aos="fade-up">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-3xl font-bold mb-16 text-center text-purple-800"
+            data-aos="fade-up"
+          >
+            Minha Experiência
+          </h2>
+          <div class="space-y-16">
+            <!-- Trabalho 1 -->
+            <div
+              class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow-md overflow-hidden"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="md:w-1/3">
+                <img
+                  src="projects/project4.jpeg"
+                  alt="Estética Automotiva Website"
+                  class="w-full h-64 object-cover"
+                />
+              </div>
+              <div class="md:w-2/3 p-6">
+                <h3 class="text-2xl font-semibold text-purple-700 mb-2">
+                  Desenvolvedor Front-end
+                </h3>
+                <p class="text-gray-600 mb-4">Estética Automotiva Du LavaCar</p>
+                <p class="text-gray-800 mb-4">
+                  O projeto Du LavaCar foi desenvolvido com HTML, Tailwind CSS e
+                  JavaScript para criar um site moderno e responsivo para o
+                  serviço de estética automotiva. O objetivo é apresentar os
+                  serviços de forma clara, com um design limpo e uma navegação
+                  fácil.
+                </p>
+                <a
+                  href="https://dulavacar.com.br/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-block bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transition duration-300"
+                >
+                  Ver projeto
+                </a>
+              </div>
+            </div>
+
+            <!-- Trabalho 2 -->
+            <div
+              class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow-md overflow-hidden"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="md:w-1/3">
+                <img
+                  src="projects/project5.jpeg"
+                  alt="Trabalho Voluntário"
+                  class="w-full h-64 object-cover"
+                />
+              </div>
+              <div class="md:w-2/3 p-6">
+                <h3 class="text-2xl font-semibold text-purple-700 mb-2">
+                  Desenvolvedor Front-End Voluntário
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  ONG SPPA (Sociedade Piracicabana de Proteção aos Animais)
+                </p>
+                <p class="text-gray-800 mb-4">
+                  Tive o privilégio de desenvolver o front-end do site da ONG
+                  SPPA como parte do meu TCC, em parceria com a organização.
+                  Além de aprimorar minhas habilidades técnicas, o projeto
+                  contribuiu para uma causa nobre, criando uma interface
+                  acessível para adotantes e apoiadores.
+                </p>
+                <a
+                  href="https://ongsppa.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-block bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transition duration-300"
+                >
+                  Ver projeto
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="py-20 bg-gray-100" data-aos="fade-up">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-3xl font-bold mb-8 text-center text-purple-800"
+            data-aos="fade-up"
+          >
+            Alguns de meus projetos
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="projects/project1.png"
+                alt="Projeto 1"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-2 text-purple-700">
+                  Gerenciamento de Biblioteca
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Desenvolvido por mim, este projeto é uma aplicação web, que
+                  facilita a gestão de uma biblioteca.
+                </p>
+                <p class="text-sm text-gray-500 mb-4">
+                  HTML, tailwind CSS, JS, PHP, MySQL
+                </p>
+                <a
+                  href="https://github.com/muzayx/Biblioteca"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-block bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transition duration-300"
+                >
+                  Ver no GitHub
+                </a>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <img
+                src="projects/project2.png"
+                alt="Projeto 2"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-2 text-purple-700">
+                  API de Pokemon
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Uma API que realiza a busca do Pokémon e retorna as suas
+                  informações detalhadas.
+                </p>
+                <p class="text-sm text-gray-500 mb-4">
+                  HTML, tailwind CSS, JS, API, PHP, MySQL
+                </p>
+                <a
+                  href="https://github.com/muzayx/Poke-API"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-block bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transition duration-300"
+                >
+                  Ver no GitHub
+                </a>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              <img
+                src="projects/project3.png"
+                alt="Projeto 3"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-2 text-purple-700">
+                  Jogo da Forca
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Desenvolvido em C#, este jogo oferece interfaces para digitar,
+                  escolher letras e muito mais.
+                </p>
+                <p class="text-sm text-gray-500 mb-4">C#</p>
+                <a
+                  href="https://github.com/muzayx/Forca"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-block bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transition duration-300"
+                >
+                  Ver no GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="py-20 bg-white" data-aos="fade-up">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-3xl font-bold mb-10 text-center text-purple-800"
+            data-aos="fade-up"
+          >
+            Minhas Habilidades
+          </h2>
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mb-16"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="flex flex-col items-center">
+              <i class="fab fa-html5 text-5xl mb-2 text-purple-500"></i>
+              <span class="text-lg">HTML</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <i class="fab fa-css3-alt text-5xl mb-2 text-purple-500"></i>
+              <span class="text-lg">CSS</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <i
+                class="devicon-tailwindcss-original text-5xl mb-2 text-purple-500"
+              ></i>
+              <span class="text-lg">TailWind CSS</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <i class="fab fa-php text-5xl mb-2 text-orange-400"></i>
+              <span class="text-lg">PHP</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <i
+                class="devicon-mysql-original text-5xl mb-2 text-orange-400"
+              ></i>
+              <span class="text-lg">MySQL</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <i class="fab fa-js text-5xl mb-2 text-orange-400"></i>
+              <span class="text-lg">JavaScript</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <i class="fab fa-react text-5xl mb-2 text-blue-500"></i>
+              <span class="text-lg">React</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <i class="fab fa-java text-5xl mb-2 text-blue-500"></i>
+              <span class="text-lg">Java</span>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 mt-8"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="flex items-center">
+              <div class="w-4 h-4 bg-purple-500 rounded-full mr-2"></div>
+              <span>Dominadas</span>
+            </div>
+            <div class="flex items-center">
+              <div class="w-4 h-4 bg-orange-400 rounded-full mr-2"></div>
+              <span>Intermediário</span>
+            </div>
+            <div class="flex items-center">
+              <div class="w-4 h-4 bg-blue-400 rounded-full mr-2"></div>
+              <span>Aprendendo</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-20 bg-gray-100" data-aos="fade-up">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-3xl font-bold mb-8 text-center text-purple-800"
+            data-aos="fade-up"
+          >
+            Entre em Contato
+          </h2>
+          <div class="max-w-lg mx-auto" data-aos="fade-up" data-aos-delay="200">
+            <p class="text-center mb-8">
+              Tem alguma pergunta ou quer entrar em contato para algum projeto?
+              Fique à vontade para me contatar!
+            </p>
+            <form id="contact-form" class="space-y-4">
+              <div>
+                <label for="name" class="block mb-2 font-medium">Nome</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                />
+              </div>
+              <div>
+                <label for="email" class="block mb-2 font-medium">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                />
+              </div>
+              <div>
+                <label for="message" class="block mb-2 font-medium"
+                  >Mensagem</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-purple-500 text-white py-2 px-4 rounded-md hover:bg-purple-600 transition duration-300"
+              >
+                Enviar Mensagem
+              </button>
+            </form>
+            <p id="form-status" class="mt-4 text-center text-purple-700"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-purple-200 py-4">
+      <div class="container mx-auto px-6 text-center">
+        <p class="text-purple-800">
+          &copy; 2025 Muza. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <div
+      id="popup"
+      class="fixed bottom-5 right-5 bg-purple-500 text-white p-4 rounded-lg shadow-lg transition-opacity duration-300 opacity-0 pointer-events-none"
+    >
+      <p>Email enviado com sucesso!</p>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+    </script>
+  </body>
+</html>

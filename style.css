@@ -1,0 +1,19 @@
+* {
+  font-family: "Poppins";
+}
+
+.container {
+  max-width: 1200px;
+}
+
+#popup {
+  transition: opacity 0.3s ease-in-out;
+}
+
+#popup.opacity-0 {
+  opacity: 0;
+}
+
+#popup:not(.opacity-0) {
+  opacity: 1;
+}
